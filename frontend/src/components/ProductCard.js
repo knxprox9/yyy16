@@ -280,9 +280,34 @@ const StyledWrapper = styled.div`
   .card .favorite input:checked ~ svg { animation: circle-bounce 0.3s; fill: #22c55e; filter: drop-shadow(0px 2px 3px rgba(34, 197, 94, 0.4)); }
   .card .favorite svg { fill: #d1d5db; transition: all 0.2s ease; }
 
-  .card .content { padding: 0 0.8rem; margin-bottom: 1rem; }
-  .card .content .brand { font-weight: 900; color: #a6a6a6; text-align: right; margin-bottom: 0.75rem; }
-  .card .content .product-name { font-weight: 700; color: #666; font-size: 0.7rem; margin-bottom: 0.5rem; text-align: right; }
+  .card .content { 
+    padding: 0 16px; /* 8px grid system - 16px = 2 grid units */
+    margin-bottom: 16px; /* 8px grid system */
+  }
+
+  .card .content .brand { 
+    font-family: 'IBM Plex Sans Arabic', 'Noto Sans Arabic', 'Amiri', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 800; 
+    font-size: 0.875rem; /* 14px - better readability */
+    color: #4a5568; /* Improved contrast from #a6a6a6 */
+    text-align: right; 
+    margin-bottom: 12px; /* 8px grid system - 12px = 1.5 grid units */
+    line-height: 1.4;
+    letter-spacing: 0.025em;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Subtle depth */
+  }
+
+  .card .content .product-name { 
+    font-family: 'IBM Plex Sans Arabic', 'Noto Sans Arabic', 'Amiri', 'Cairo', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600; 
+    color: #2d3748; /* Much better contrast from #666 */
+    font-size: 0.75rem; /* 12px - refined size */
+    margin-bottom: 8px; /* 8px grid system - 1 grid unit */
+    text-align: right; 
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    text-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.08); /* Subtle text depth */
+  }
 
   .card .content .loading-indicator { display: flex; justify-content: center; align-items: center; gap: 0.2rem; margin-bottom: 1rem; padding: 0.3rem 0; }
   .card .content .loading-indicator .dot { width: 4px; height: 4px; border-radius: 50%; background-color: #F79E1B; animation: typing-dots 1.4s infinite ease-in-out; }
