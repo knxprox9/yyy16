@@ -30,72 +30,80 @@ const ProductCard = () => {
               {/* نفس أزرار/أيقونات الدفع الموجودة في الكرت الأصلي بنفس التصميم والحجم + الأزرار المطلوبة دون تكرار */}
               <div className="mini-payments">
                 <ul className="colors-container">
-                  {/* الموجود سابقاً */}
                   <li className="payment-card visa" aria-label="Visa">
-                    <div className="card-icon real-icon visa"><img src="/assets/visa.png" alt="Visa" style={{height: '16px', width: 'auto'}}/></div>
+                    <div className="card-icon premium-card visa">
+                      <div className="card-brand">VISA</div>
+                    </div>
                     <div className="label-text">Visa</div>
                   </li>
-                  <li className="payment-card google" aria-label="Google Pay">
-                    <div className="card-icon real-icon google"><img src="/assets/googleplay.png" alt="Google Play" style={{height: '16px', width: 'auto'}}/></div>
-                    <div className="label-text">Google Pay</div>
-                  </li>
                   <li className="payment-card mastercard" aria-label="Mastercard">
-                    <div className="card-icon real-icon mastercard"><img src="/assets/mastercard.png" alt="Mastercard" style={{height: '16px', width: 'auto'}}/></div>
+                    <div className="card-icon premium-card mastercard">
+                      <div className="card-circles">
+                        <div className="circle red"></div>
+                        <div className="circle yellow"></div>
+                      </div>
+                    </div>
                     <div className="label-text">Mastercard</div>
                   </li>
+                  <li className="payment-card googleplay" aria-label="Google Play">
+                    <div className="card-icon premium-card googleplay">
+                      <div className="card-logo">▶</div>
+                    </div>
+                    <div className="label-text">Google Play</div>
+                  </li>
                   <li className="payment-card roblox" aria-label="Roblox">
-                    <div className="card-icon real-icon roblox"><SiRoblox size={20} color="#E2231A"/></div>
+                    <div className="card-icon premium-card roblox">
+                      <div className="card-brand">R</div>
+                    </div>
                     <div className="label-text">Roblox</div>
                   </li>
-
-                  {/* جديد — بدون تكرار وبنفس تصميم الأزرار الحالية */}
-                  <li className="payment-card playstation" aria-label="PlayStation (SA)">
-                    <div className="card-icon real-icon playstation"><SiPlaystation size={20} color="#003791"/></div>
-                    <div className="label-text">PlayStation SA</div>
+                  <li className="payment-card playstation" aria-label="PlayStation">
+                    <div className="card-icon premium-card playstation">
+                      <div className="card-logo">◐◒◑◓</div>
+                    </div>
+                    <div className="label-text">PlayStation</div>
                   </li>
-                  <li className="payment-card playstation" aria-label="PlayStation (US)">
-                    <div className="card-icon real-icon playstation"><SiPlaystation size={20} color="#003791"/></div>
-                    <div className="label-text">PlayStation US</div>
+                  <li className="payment-card amazon" aria-label="Amazon">
+                    <div className="card-icon premium-card amazon">
+                      <div className="card-brand">amazon</div>
+                    </div>
+                    <div className="label-text">Amazon</div>
                   </li>
-                  <li className="payment-card playstation" aria-label="PlayStation (AE)">
-                    <div className="card-icon real-icon playstation"><SiPlaystation size={20} color="#003791"/></div>
-                    <div className="label-text">PlayStation AE</div>
+                  <li className="payment-card itunes" aria-label="iTunes">
+                    <div className="card-icon premium-card itunes">
+                      <div className="card-logo">♪</div>
+                    </div>
+                    <div className="label-text">iTunes</div>
+                  </li>
+                  <li className="payment-card shein" aria-label="Shein">
+                    <div className="card-icon premium-card shein">
+                      <div className="card-brand">SHEIN</div>
+                    </div>
+                    <div className="label-text">Shein</div>
+                  </li>
+                  <li className="payment-card steam" aria-label="Steam">
+                    <div className="card-icon premium-card steam">
+                      <div className="card-logo">◉</div>
+                    </div>
+                    <div className="label-text">Steam</div>
                   </li>
                   <li className="payment-card fortnite" aria-label="Fortnite">
-                    <div className="card-icon real-icon fortnite"><TbBrandFortnite size={20} color="#6A5ACD"/></div>
+                    <div className="card-icon premium-card fortnite">
+                      <div className="card-brand">F</div>
+                    </div>
                     <div className="label-text">Fortnite</div>
                   </li>
                   <li className="payment-card razer" aria-label="Razer Gold">
-                    <div className="card-icon real-icon razer"><SiRazer size={20} color="#00FF00"/></div>
+                    <div className="card-icon premium-card razer">
+                      <div className="card-logo">⧨</div>
+                    </div>
                     <div className="label-text">Razer Gold</div>
                   </li>
-                  <li className="payment-card crossfire" aria-label="CrossFire">
-                    <div className="card-icon real-icon crossfire"><span style={{fontSize: 9, fontWeight: 800}}>CrossFire</span></div>
-                    <div className="label-text">CrossFire</div>
-                  </li>
-                  <li className="payment-card itunes" aria-label="iTunes">
-                    <div className="card-icon real-icon itunes"><SiItunes size={20} color="#FA2D48"/></div>
-                    <div className="label-text">iTunes</div>
-                  </li>
-                  <li className="payment-card googleplay" aria-label="Google Play">
-                    <div className="card-icon real-icon googleplay"><SiGoogleplay size={20} color="#34A853"/></div>
-                    <div className="label-text">Google Play</div>
-                  </li>
-                  <li className="payment-card steam" aria-label="Steam">
-                    <div className="card-icon real-icon steam"><SiSteam size={20} color="#0B1A2E"/></div>
-                    <div className="label-text">Steam</div>
-                  </li>
-                  <li className="payment-card amazon" aria-label="Amazon">
-                    <div className="card-icon real-icon amazon"><SiAmazon size={20} color="#FF9900"/></div>
-                    <div className="label-text">Amazon</div>
-                  </li>
-                  <li className="payment-card shein" aria-label="Shein">
-                    <div className="card-icon real-icon shein"><span style={{fontSize: 9, fontWeight: 800}}>SHEIN</span></div>
-                    <div className="label-text">Shein</div>
-                  </li>
-                  <li className="payment-card flower" aria-label="Flower Art">
-                    <div className="card-icon real-icon flower"><span style={{fontSize: 9, fontWeight: 800}}>Flower</span></div>
-                    <div className="label-text">Flower Art</div>
+                  <li className="payment-card flower" aria-label="Flower">
+                    <div className="card-icon premium-card flower">
+                      <div className="card-logo">❀</div>
+                    </div>
+                    <div className="label-text">Flower</div>
                   </li>
                 </ul>
               </div>
