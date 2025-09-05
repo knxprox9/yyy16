@@ -2,13 +2,19 @@ import React from "react";
 import "./App.css";
 import ProductCard from "./components/ProductCard";
 import CardShowcase from "./components/CardShowcase";
+import StandaloneDemo from "./components/StandaloneDemo";
 
 function App() {
-  // Show showcase if URL contains 'showcase', otherwise show main app
-  const showShowcase = window.location.search.includes('showcase');
+  // Show different views based on URL parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const view = urlParams.get('view');
   
-  if (showShowcase) {
+  if (view === 'showcase') {
     return <CardShowcase />;
+  }
+  
+  if (view === 'standalone') {
+    return <StandaloneDemo />;
   }
 
   return (
