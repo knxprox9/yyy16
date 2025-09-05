@@ -141,16 +141,27 @@ const ProductCard = () => {
             <div className="colors">
               <ul className="colors-container">
                 <li className="payment-card visa" aria-label="Visa">
-                  <div className="card-icon real-icon visa"></div>
-                </li>
-                <li className="payment-card google" aria-label="Google Play">
-                  <div className="card-icon real-icon google"></div>
+                  <div className="card-icon premium-card visa">
+                    <div className="card-brand">VISA</div>
+                  </div>
                 </li>
                 <li className="payment-card mastercard" aria-label="Mastercard">
-                  <div className="card-icon real-icon mastercard"></div>
+                  <div className="card-icon premium-card mastercard">
+                    <div className="card-circles">
+                      <div className="circle red"></div>
+                      <div className="circle yellow"></div>
+                    </div>
+                  </div>
                 </li>
-                <li className="payment-card itunes" aria-label="iTunes">
-                  <div className="card-icon real-icon itunes"></div>
+                <li className="payment-card googleplay" aria-label="Google Play">
+                  <div className="card-icon premium-card googleplay">
+                    <div className="card-logo">▶</div>
+                  </div>
+                </li>
+                <li className="payment-card roblox" aria-label="Roblox">
+                  <div className="card-icon premium-card roblox">
+                    <div className="card-brand">R</div>
+                  </div>
                 </li>
               </ul>
             </div>
