@@ -305,117 +305,191 @@ const StyledWrapper = styled.div`
 
   /* Remove all old conflicting CSS rules */
 
-  /* UNIFIED BUTTON STYLES - ALL FOUR BUTTONS (Visa, Mastercard, iTunes, Google Play) */
-  /* Main card - exact 24px height for all buttons */
-  .card .content .color-size-container .colors .colors-container .payment-card.visa,
-  .card .content .color-size-container .colors .colors-container .payment-card.mastercard,
-  .card .content .color-size-container .colors .colors-container .payment-card.itunes,
-  .card .content .color-size-container .colors .colors-container .payment-card.google { 
-    height: 24px !important; 
-    width: auto !important;
-    position: relative !important;
-    cursor: pointer !important;
-  }
+  /* PREMIUM CARD ICON STYLES - UNIFIED DESIGN SYSTEM */
   
-  .card .content .color-size-container .colors .colors-container .payment-card.visa .real-icon,
-  .card .content .color-size-container .colors .colors-container .payment-card.mastercard .real-icon,
-  .card .content .color-size-container .colors .colors-container .payment-card.itunes .real-icon,
-  .card .content .color-size-container .colors .colors-container .payment-card.google .real-icon { 
-    padding: 2px !important; 
-    margin: 0 !important; 
-    background: transparent !important; 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1) !important; 
-    border-radius: 4px !important; 
-    overflow: visible !important; 
-    height: 24px !important; 
-    width: 38px !important; 
-    display: inline-flex !important; 
+  /* Base Premium Card Style */
+  .premium-card {
+    width: 38px !important;
+    height: 24px !important;
+    border-radius: 6px !important;
+    display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    transition: all 0.2s ease-in-out !important;
+    position: relative !important;
     cursor: pointer !important;
-    border: none !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    font-weight: 700 !important;
+    font-size: 8px !important;
+    letter-spacing: 0.5px !important;
+    box-shadow: 
+      0 2px 8px rgba(0, 0, 0, 0.15),
+      0 1px 3px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    overflow: hidden !important;
   }
 
-  /* Background images for each payment method */
-  .card .content .color-size-container .colors .colors-container .payment-card.visa .real-icon {
-    background-image: url('/assets/visa.png') !important;
-  }
-  .card .content .color-size-container .colors .colors-container .payment-card.mastercard .real-icon {
-    background-image: url('/assets/mastercard.png') !important;
-  }
-  .card .content .color-size-container .colors .colors-container .payment-card.itunes .real-icon {
-    background-image: url('/assets/itunes.png') !important;
-  }
-  .card .content .color-size-container .colors .colors-container .payment-card.google .real-icon {
-    background-image: url('/assets/googleplay-new.png') !important;
-  }
-  
-  /* Hover effects */
-  .card .content .color-size-container .colors .colors-container .payment-card.visa .real-icon:hover,
-  .card .content .color-size-container .colors .colors-container .payment-card.mastercard .real-icon:hover,
-  .card .content .color-size-container .colors .colors-container .payment-card.itunes .real-icon:hover,
-  .card .content .color-size-container .colors .colors-container .payment-card.google .real-icon:hover {
-    transform: translateY(-2px) scale(1.05) !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15) !important;
-    border: none !important;
-  }
-  
-  /* Active/pressed effects */
-  .card .content .color-size-container .colors .colors-container .payment-card.visa .real-icon:active,
-  .card .content .color-size-container .colors .colors-container .payment-card.mastercard .real-icon:active,
-  .card .content .color-size-container .colors .colors-container .payment-card.itunes .real-icon:active,
-  .card .content .color-size-container .colors .colors-container .payment-card.google .real-icon:active {
-    transform: translateY(1px) scale(0.95) !important;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.15) !important;
+  /* Premium Card Gradients & Colors */
+  .premium-card.visa {
+    background: linear-gradient(135deg, #1a1f71 0%, #4757a9 50%, #1a1f71 100%) !important;
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
   }
 
-  /* Mini overlay - exact 32px height for all buttons */
-  .mini-overlay .payment-card.visa,
-  .mini-overlay .payment-card.mastercard,
-  .mini-overlay .payment-card.itunes,
-  .mini-overlay .payment-card.google { 
-    height: auto !important; 
-  }
-  
-  /* تنسيقات خاصة للأيقونات التي تستخدم background images */
-  .mini-overlay .payment-card.visa .card-icon.real-icon,
-  .mini-overlay .payment-card.mastercard .card-icon.real-icon,
-  .mini-overlay .payment-card.itunes .card-icon.real-icon,
-  .mini-overlay .payment-card.google .card-icon.real-icon { 
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
+  .premium-card.mastercard {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%) !important;
+    color: #ffffff !important;
   }
 
-  /* Background images for mini overlay */
-  .mini-overlay .payment-card.visa .card-icon.real-icon {
-    background-image: url('/assets/visa.png') !important;
+  .premium-card.googleplay {
+    background: linear-gradient(135deg, #34a853 0%, #4caf50 50%, #2e7d32 100%) !important;
+    color: #ffffff !important;
+    font-size: 12px !important;
   }
-  .mini-overlay .payment-card.mastercard .card-icon.real-icon {
-    background-image: url('/assets/mastercard.png') !important;
+
+  .premium-card.roblox {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 50%, #a93226 100%) !important;
+    color: #ffffff !important;
+    font-size: 12px !important;
+    font-weight: 900 !important;
   }
-  .mini-overlay .payment-card.itunes .card-icon.real-icon {
-    background-image: url('/assets/itunes.png') !important;
+
+  .premium-card.playstation {
+    background: linear-gradient(135deg, #003791 0%, #0050c7 50%, #003791 100%) !important;
+    color: #ffffff !important;
+    font-size: 10px !important;
   }
-  .mini-overlay .payment-card.google .card-icon.real-icon {
-    background-image: url('/assets/googleplay-new.png') !important;
+
+  .premium-card.amazon {
+    background: linear-gradient(135deg, #ff9900 0%, #ffb84d 50%, #e68a00 100%) !important;
+    color: #000000 !important;
+    font-weight: 900 !important;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) !important;
   }
-  
-  /* Mini overlay hover effects - جميع الأيقونات */
-  .mini-overlay .payment-card .card-icon.real-icon:hover {
-    transform: translateY(-2px) scale(1.05) !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15) !important;
-    border: none !important;
+
+  .premium-card.itunes {
+    background: linear-gradient(135deg, #fa2d48 0%, #ff5470 50%, #e91e40 100%) !important;
+    color: #ffffff !important;
+    font-size: 14px !important;
   }
-  
-  /* Mini overlay active effects - جميع الأيقونات */
-  .mini-overlay .payment-card .card-icon.real-icon:active {
-    transform: translateY(1px) scale(0.95) !important;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.15) !important;
+
+  .premium-card.shein {
+    background: linear-gradient(135deg, #000000 0%, #2c2c2c 50%, #000000 100%) !important;
+    color: #ffffff !important;
+    font-size: 7px !important;
+    font-weight: 900 !important;
+  }
+
+  .premium-card.steam {
+    background: linear-gradient(135deg, #1b2838 0%, #2a475e 50%, #1b2838 100%) !important;
+    color: #66c0f4 !important;
+    font-size: 14px !important;
+  }
+
+  .premium-card.fortnite {
+    background: linear-gradient(135deg, #6a5acd 0%, #8a7dda 50%, #5a4fcf 100%) !important;
+    color: #ffffff !important;
+    font-size: 12px !important;
+    font-weight: 900 !important;
+  }
+
+  .premium-card.razer {
+    background: linear-gradient(135deg, #00ff00 0%, #44ff44 50%, #00cc00 100%) !important;
+    color: #000000 !important;
+    font-size: 12px !important;
+    font-weight: 900 !important;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+  }
+
+  .premium-card.flower {
+    background: linear-gradient(135deg, #ff69b4 0%, #ff99cc 50%, #ff1493 100%) !important;
+    color: #ffffff !important;
+    font-size: 14px !important;
+  }
+
+  /* Mastercard Circles */
+  .card-circles {
+    display: flex !important;
+    align-items: center !important;
+    gap: -2px !important;
+  }
+
+  .card-circles .circle {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    opacity: 0.9 !important;
+  }
+
+  .card-circles .circle.red {
+    background: #eb001b !important;
+    z-index: 2 !important;
+  }
+
+  .card-circles .circle.yellow {
+    background: #ff5f00 !important;
+    margin-left: -6px !important;
+    z-index: 1 !important;
+  }
+
+  /* Hover Effects - Main Card */
+  .card .premium-card:hover {
+    transform: translateY(-2px) scale(1.08) !important;
+    box-shadow: 
+      0 8px 25px rgba(0, 0, 0, 0.25),
+      0 4px 12px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  }
+
+  /* Active Effects - Main Card */
+  .card .premium-card:active {
+    transform: translateY(0px) scale(1.02) !important;
+    box-shadow: 
+      0 3px 12px rgba(0, 0, 0, 0.2),
+      0 1px 4px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+  }
+
+  /* Mini Overlay Premium Card Styles */
+  .mini-overlay .premium-card {
+    width: 50px !important;
+    height: 32px !important;
+    font-size: 9px !important;
+  }
+
+  .mini-overlay .premium-card.googleplay,
+  .mini-overlay .premium-card.itunes,
+  .mini-overlay .premium-card.steam,
+  .mini-overlay .premium-card.flower {
+    font-size: 16px !important;
+  }
+
+  .mini-overlay .premium-card.playstation {
+    font-size: 12px !important;
+  }
+
+  .mini-overlay .premium-card.razer {
+    font-size: 14px !important;
+  }
+
+  /* Mini Overlay Hover Effects */
+  .mini-overlay .premium-card:hover {
+    transform: translateY(-3px) scale(1.1) !important;
+    box-shadow: 
+      0 12px 35px rgba(0, 0, 0, 0.3),
+      0 6px 15px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  }
+
+  /* Mini Overlay Active Effects */
+  .mini-overlay .premium-card:active {
+    transform: translateY(-1px) scale(1.05) !important;
+    box-shadow: 
+      0 6px 20px rgba(0, 0, 0, 0.25),
+      0 3px 8px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
   }
 
 
