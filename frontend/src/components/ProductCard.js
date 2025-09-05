@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { SiRoblox, SiPlaystation, SiSteam, SiAmazon, SiItunes, SiEpicgames, SiRazer, SiGoogleplay } from 'react-icons/si';
-import { TbBrandFortnite } from 'react-icons/tb';
-
 import { FiTruck, FiShield, FiGift, FiX, FiCreditCard } from 'react-icons/fi';
 import ToggleButton from './ToggleButton';
 import TransparentIconVideo from './TransparentIconVideo';
